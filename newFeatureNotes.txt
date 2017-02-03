@@ -1,0 +1,8 @@
+1: Question Agnostic quizPath method
+        Create a question path trajectory that adapts to anynumber of questions. Instead of a strict path of greater and lesser difficulty levels, the adapted path for more simple questions should be odd numbers, while the adapted path for progessively more difficult questions should be easier numbers.  Ideally if a user gets a question wrong they'll get rolled back to a more simple odd question.  Overall a higher question  should correspond to a higher difficultly.  Even numbers will be naturally be a lot more difficult than odd numbers.
+
+2:  Random question generator
+        Instead of going by a strict sequence of questions, the question sequnce should be generated randomly.  Ideally via an adaptational algorithm.
+
+3: Difficulty Adaptation Toggle
+        Users should have the benefit of choosing the sort of test difficulty and adaptation that they would like.
