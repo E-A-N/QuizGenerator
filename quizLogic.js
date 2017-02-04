@@ -6,7 +6,6 @@
 var quizMaster = {
 
     //Initialize attributes
-    userName        : document.getElementById("username"),
     userFeedback    : document.getElementById("answerDisplay"),
     submitButton    : document.getElementById("dataSubmit"),
     quizForm        : document.getElementById("formx"),
@@ -503,7 +502,6 @@ var quizMaster = {
         */
 
         //fields for later use
-        this.userName.style.display     = "none";
         this.submitButton.style.display = "none";
 
         //Initialize the math method (as in field value not member function)
