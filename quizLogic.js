@@ -13,6 +13,7 @@ var quizMaster = {
     quizContainer   : document.getElementById("quizContainer"),
     quizType        : document.getElementById("quiztype"),
     failURL         : document.getElementById("fail_url"),
+    difficulty      : document.getElementById("difficulty"),
     correctAnswer   : 'Correct!', //message to display upon user getting correct answer
     quizResult      : '',
     quizData        : {}, //This attribute will information needed for database
@@ -316,6 +317,10 @@ var quizMaster = {
         this.userFeedback.innerHTML = "</br>" + msg + callback;
     },
 
+    renderDifficulty: function(){
+
+    },
+
     renderQuestion: function(){
         //This method renders current question to the DOM
         //this method is called by quizUpdate
@@ -490,6 +495,46 @@ var quizMaster = {
         data = JSON.stringify(data);
         console.log(data);
         return data;
+    },
+
+    questionGenerate: function(speciality){
+        /*
+            evenly numbered questions should be noticably more difficult
+        */
+        let maxQuest;
+        let lenient = [];
+        let questList = [];
+        let spc = specialty || Math.floor(Math.random() * 12);
+        spc = spc === 0 ? 1 : spc; //eliminate questions involving zero
+        switch(this.difficulty){
+            case "easy":
+            maxQuest = 10;
+            lenient = [1,2,3];
+            break;
+
+            case: "medium":
+            maxQuest = 20;
+            lenient = [1,2,3,4,5];
+            break;
+
+            case "advanced":
+            maxQuest = 30;
+            lenient = [1,2,3,4,5,6,7,8,9];
+            break;
+        }
+
+        for (let x = 0; x < maxQuest; x++){
+            if (x % 2 == 0){
+                let rand = Math.floor(Math.random() * 12);
+                questList.push([spc,rand]);
+            }
+            else {
+                let rand = Math.floor(Math.random() * lenient.length);
+                questList.push([spc,rand]);
+            }
+
+        }
+        return questList;
     },
 
     init: function(method,data){
