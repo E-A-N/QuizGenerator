@@ -28,7 +28,7 @@ var quizMaster = {
     passed          : 0,  //This attributes stores if user has passed or not
     previousQuest   : undefined,  //This attribute stores previous question asked to user
     mathMethod      : "math",     //This attributes stores the kind of math the quiz will use
-    //The init function will will change mathMethod to appropriate context
+    //The init function will change mathMethod to appropriate context
 
 
     /**
