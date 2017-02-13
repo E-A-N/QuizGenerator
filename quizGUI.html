@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="javascript" src="quizLogic.js"></script>
+        <script type="text/javascript" src="quizRedo.js"></script>
     </head>
-
     <body>
-        <h2  id="title"></h2>
-        <div id="containter"></div>
+        <h2 id="title">Herro Robo!</h2>
+        <div id="container"></div>
+        <script type="text/javascript">
+            var myQuiz = Object.create(quizAPI);
+            myQuiz.init("add");
+        </script>
     </body>
 </html>
