@@ -4,20 +4,21 @@
 
     var quizAPI = {
 
-        /**
-            * The method finds math operator that gives context to worded problems
-            * @description This method is called by the questionPresentation method
-            * @example
-            *var mathType = "addition";
-            *var operator = quizMaster.mathContext(mathType);
-            *console.log(operator); //"+"
-            * @param {string} method - argument represent context of math problem
-            * @returns {string}
-        */
+
 
         mathContext: '',
-
         setMathContext: function (method) {
+            /**
+                * The method finds math operator that gives context to worded problems
+                * @description This method is called by the questionPresentation method
+                * @example
+                *var mathType = "addition";
+                *var operator = quizMaster.mathContext(mathType);
+                *console.log(operator); //"+"
+                * @param {string} method - argument represent context of math problem
+                * @returns {string}
+            */
+
             let operator;
             switch(method) {
 
